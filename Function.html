@@ -164,7 +164,29 @@
 
 <label>[Bài tập] Hàm kiểm tra số nguyên tố</label>
 <script>
+    let nhapso = +prompt("Nhập số cần check")
+    checksonguyento(nhapso)
 
+    // console.log(a)
+    function checksonguyento(value) {
+        let count = 0
+        if (value < 2) { // Kiem tra so dau vao nhỏ hơn 2, nếu không nỏ hơn hai thì false.
+            alert(nhapso + " không phải là số nguyên tố");
+            console.log(566)
+            
+            // return false;
+        } else {
+            for (let i = 2; i <= value; i++) {
+                if (value % i == 0) {
+                    count += 1
+                }
+            }
+            if (count == 1) {
+                alert(nhapso + " là số nguyên tố");
+                // return true;
+            }
+        }
+    }
 </script>
 
 </body>
